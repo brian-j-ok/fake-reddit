@@ -29,8 +29,10 @@ const Nav = () => {
             </svg>
           </Link>
 
-          <div className="sub">
-
+          <div className="sub-dropdown">
+            <button className="nav-button">
+              <span className="active-sub">Popular</span>
+            </button>
           </div>
 
           <div className="search">

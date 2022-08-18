@@ -9,6 +9,8 @@
   flex-grow: 1;
 }
 
+/* Logo  */
+
 .logo {
   align-items: center;
   display: inline-flex;
@@ -25,4 +27,50 @@
   height: 18px;
   margin-right: 20px;
   width: auto;
+}
+
+/* Sub Channels */
+
+@media (min-width: 995px) {
+  .sub-dropdown {
+    width: 270px;
+  }
+
+  .active-sub {
+    display: inline;
+  }
+}
+
+.sub-dropdown {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 36px;
+  position: relative;
+}
+
+.nav-button {
+  background-color: #FFFF;
+  bottom: 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: black;
+  height: 100%;
+  left: 0;
+  line-height: 34px;
+  overflow: hidden;
+  padding-left: 40px;
+  padding-right: 56px;
+  position: absolute;
+  text-align: left;
+  text-overflow: ellipsis;
+  top: 0;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.active-sub {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
 }
