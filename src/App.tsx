@@ -6,7 +6,6 @@ import Login from './components/Login';
 const App = () => {
   return (
     <Router>
-      <Nav />
       <Routes>
         <Route path="/" element={<Login />} />
       </Routes>
