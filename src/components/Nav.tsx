@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+import Popup from './Popup';
 
 import '../styles/Nav.css';
 
 const Nav = () => {
+  const [seen, setSeen] = useState(false);
+
   return (
     <header>
+      <Popup seen={seen} onClose={() => setSeen(false)} />
 
       <div className="nav">
         <div className="logo-sub-search">
@@ -42,8 +47,8 @@ const Nav = () => {
 
         <div className="account">
           <div className="login">
-            <button>Log In</button>
-            <button>Sign Up</button>
+            <button className="login-btn" onClick={() => setSeen(true)}>Log In</button>
+            <button className="signup-btn">Sign Up</button>
           </div>
           <div>Account Info</div>
         </div>
