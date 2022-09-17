@@ -3,9 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { auth, logInWithEmailAndPassword, signInWithGoogle } from '../firebase/firebase-config';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
-// import '../styles/Login.css';
+import Reset from './Reset';
 
-const Login = () => {
+const Login = (props: any) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, loading, error] = useAuthState(auth);
@@ -45,7 +45,7 @@ const Login = () => {
           Login with Google
         </button>
         <div>
-          <Link to="/reset">Forgot Password</Link>
+          <button onClick={() => props.changeRef(<Reset />)}>Forgot Password</button>
         </div>
         <div>
           Don't have an account? <Link to="/register">Register</Link> now.
