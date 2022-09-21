@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Popup from './Popup';
 
@@ -8,10 +8,10 @@ import '../styles/Nav.css';
 const Nav = () => {
   const [seen, setSeen] = useState(false);
 
-  return (
-    <header>
-      <Popup seen={seen} onClose={() => setSeen(false)} />
+  const navigate = useNavigate();
 
+  return (
+    <header id="nav">
       <div className="nav">
         <div className="logo-sub-search">
           <Link className="logo" to="/">
@@ -47,8 +47,8 @@ const Nav = () => {
 
         <div className="account">
           <div className="login">
-            <button className="login-btn" onClick={() => setSeen(true)}>Log In</button>
-            <button className="signup-btn">Sign Up</button>
+            <Link to="login">Log In</Link>
+            <Link to="register">Sign Up</Link>
           </div>
           <div>Account Info</div>
         </div>

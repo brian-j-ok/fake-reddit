@@ -1,22 +1,27 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from "react-router-dom";
+import { createBrowserHistory } from "history";
 
 import Nav from './components/Nav';
-import Homepage from './components/Homepage';
-
+import Popup from './components/Popup';
 import Login from './components/Login';
 import Register from './components/Register';
-
+import Reset from './components/Reset';
 
 const App = () => {
   return (
-    <Router>
+    <div id="app">
       <Nav />
+
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Register" element={<Register />} />
+        <Route path="/" element={<Popup />}>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="reset" element={<Reset />} />
+        </Route>
       </Routes>
-    </Router>
+    </div>
+
   )
 }
 

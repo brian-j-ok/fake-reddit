@@ -19,10 +19,10 @@ const Register = () => {
     registerWithEmailAndPassword(name, email, password);
   };
 
-  useEffect(() => {
-    if (loading) return;
-    if (user) navigate("/dashboard");
-  }, [user, loading]);
+  // useEffect(() => {
+  //   if (loading) return;
+  //   if (user) navigate("/dashboard");
+  // }, [user, loading]);
 
   return (
     <div className="register">
