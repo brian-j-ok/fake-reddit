@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { auth, logInWithEmailAndPassword, signInWithGoogle } from '../../firebase/firebase-config';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { logInWithEmailAndPassword, signInWithGoogle } from '../../firebase/firebase-config';
 
 import '../../styles/popup/Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, loading, error] = useAuthState(auth);
-  const navigate = useNavigate();
+  // const [user, loading, error] = useAuthState(auth);
 
   // useEffect(() => {
   //   if (loading) {
