@@ -1,12 +1,10 @@
-import { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from "react-router-dom";
-import { createBrowserHistory } from "history";
+import { Routes, Route } from "react-router-dom";
 
 import Nav from './components/Nav';
-import Popup from './components/Popup';
-import Login from './components/Login';
-import Register from './components/Register';
-import Reset from './components/Reset';
+import Popup from './components/popup/Popup';
+import Login from './components/popup/Login';
+import Register from './components/popup/Register';
+import Reset from './components/popup/Reset';
 
 const App = () => {
   return (
@@ -14,7 +12,7 @@ const App = () => {
       <Nav />
 
       <Routes>
-        <Route path="/" element={<Popup />}>
+        <Route path="/popup" element={<Popup />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="reset" element={<Reset />} />

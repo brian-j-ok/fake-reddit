@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import Popup from './Popup';
+import Popup from './popup/Popup';
 
 import '../styles/Nav.css';
 
@@ -47,8 +47,8 @@ const Nav = () => {
 
         <div className="account">
           <div className="login">
-            <Link to="login">Log In</Link>
-            <Link to="register">Sign Up</Link>
+            <Link to="/popup/login">Log In</Link>
+            <Link to="/popup/register">Sign Up</Link>
           </div>
           <div>Account Info</div>
         </div>

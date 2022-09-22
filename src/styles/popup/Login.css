@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.Login {
+  display: block;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+}
+
+.OnboardingStep {
+  height: 100%;
+  display: flex;
+  color: #1a1a1b;
+}
+
+.Onboarding__step {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.Step {
+  height: inherit;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row nowrap;
+}
+
+.Art {
+  background-image: url(https://www.redditstatic.com/accountmanager/bbb584033aa89e39bad69436c504c9bd.png);
+  width: 156px;
+  min-height: 430px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Step__content {
+  align-self: center;
+  padding: 24px;
+  width: 100%;
+}
+
+.Title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.UserAgreement {
+  margin-bottom: 48px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-top: 8px;
+}
+
+.LoginForm {
+  width: 280px;
+}
+
+.Sso {
+  margin-bottom: 18px;
+}
+
+.btn-wrappers {
+  display: block;
+  height: 44px;
+  margin: 8px 0;
+  max-width: 400px;
+  position: relative;
+  width: 280px;
+}
+
+.relative_div {
+  position: relative;
+}
+
+.iframe {
+  display: block;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 44px;
+  width: 300px;
+  border: 0px;
+  margin: -2px -10px;
+}
+
+.btn-body {
+  color: #202124;
+  direction: ltr;
+  font-family: arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  margin: 0;
+  overflow: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+.btn-container {
+  padding: 2px 10px;
+}
+
+.btn {
+  max-width: 400px;
+  min-width: 200px;
+  width: 280px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  transition: backgroun-color .218s, border-color .218s;
+  -webkit-user-select: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #dadce0;
+  cursor: pointer;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  height: 40px;
+  letter-spacing: .25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 12px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.btn-box {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.btn-image {
+  display: flex;
+  border-radius: 50%;
+  height: 20px;
+  margin-left: -4px;
+  margin-right: 20px;
+  min-width: 20px;
+  width: 20px;
+}
+
+.btn_txt_container {
+  font-family: 'Roboto';
+  font-size: 12px;
+  text-align: left;
+
+  flex-grow: 1;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.btn_continue {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn_email_container {
+  display: flex;
+  align-items: center;
+  color: #5f6368;
+  fill: #5f6368;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.btn_email {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.google_img_container {
+  margin-left: 8px;
+  margin-right: -4px;
+  height: 18px;
+  min-width: 18px;
+  width: 18px;
+}
+
+.google_icon {
+  display: block;
+}
+
+.Sso__divider {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  margin: 28px 0;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.Sso__dividerLine {
+  border-top: 1px solid #edeff1;
+  width: 40%;
+}
+
+.Sso__dividerText {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #878a8c;
+  text-transform: uppercase;
+}
+
+/* Log-in Non OAuth Sign In */
+
+.AnimatedForm__field {
+  position: relative;
+
+  border: none;
+}
+
+.AnimatedForm__field::before {
+  z-index: 1;
+  right: 14px;
+  top: 18px;
+  height: 10px;
+  width: 12px;
+  background: url(https://www.redditstatic.com/accountmanager/d489caa9704588f7b7e1d7e1ea7b38b8.svg);
+}
+
+.AnimatedForm__field::after, .AnimatedForm__field::before {
+  position: absolute;
+  display: block;
+  background-size: contain;
+  content: "";
+  transition: all .2s ease-in-out;
+  -webkit-transform: translate3d(5px, 0, 0);
+  transform: translate3d(5px, 0, 0);
+  opacity: 0;
+}
+
+.AnimatedForm__field::after {
+  right: 19px;
+  top: 18.5px;
+  height: 11px;
+  width: 2px;
+  background: url(https://www.redditstatic.com/accountmanager/90a416eeb64d4d6ecd46c53d4ee11975.svg);
+}
+
+.AnimatedForm__textInput {
+  transform: translateZ(0);
+  outline: 0;
+  width: 100%;
+  appearance: none;
+  transition: all .2s ease-in-out;
+  height: 48px;
+  padding: 22px 12px 10px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 4px;
+  background-color: #fcfcfb;
+
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+
+  margin: 0px;
+}
+
+.AnimatedForm__textInputLabel {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  top: 14px;
+  left: 12px;
+  color: #a5a4a4;
+  text-transform: uppercase;
+  transform: translateZ(0);
+  transform-origin: 0 50%;
+  transition: all .2s ease-in-out;
+  pointer-events: none;
+  line-height: 23px;
+  cursor: default;
+}
+
+.AnimatedForm__textInputLabel::after {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 7px;
+  content: "\2022";
+  color: #24a0ed;
+}
+
+.s-margin {
+  margin-top: 12px;
+}
+
+.AnimatedForm__submitButton {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: unset;
+  line-height: 18px;
+  text-transform: unset;
+  background: #0079d3;
+  border-radius: 999px;
+  color: #fff;
+  height: 40px;
+  padding: 0 16px;
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  min-height: 35px;
+  max-width: 392px;
+  min-width: 155px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.AnimatedForm__submitButton::before {
+  position: absolute;
+  content: "";
+  opacity: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Bottom Text */
+
+.secondary-text {
+  font-weight: 400;
+  text-transform: none;
+}
+
+.BottomLink .BottomText {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.BottomText {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.BottomText.register {
+  margin-bottom: 0px;
+}
+
+.BottomLink {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: .5px;
+  line-height: 24px;
+}
+
+.link {
+  color: #0079d3;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.register > .link {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  line-height: 24px;
+  text-transform: uppercase;
+}

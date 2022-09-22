@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
-import "../styles/Popup.css";
+import "../../styles/popup/Popup.css";
 
 const Popup = (props: any, { className='portal', el='div'}) => {
 
