@@ -1,0 +1,141 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.headerProps {
+  flex: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 80;
+  margin-top: 0;
+}
+
+.bodyText {
+  color: #1c1c1c;
+}
+
+.headerHeight {
+  height: 48px;
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.navContainer {
+  align-items: center;
+  display: inline-flex;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #EDEFF1;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-grow: 1;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.searchContainer {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.logo {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.logo-pic {
+  height: 32px;
+  padding: 8px 8px 8px 0;
+  width: 32px;
+}
+
+@media (min-width: 1070px) {
+  .logo-text {
+    display: block;
+  }
+}
+
+.logo-text {
+  height: 18px;
+  margin-right: 20px;
+  width: auto;
+}
+
+/* Search Bar */
+.searchBar {
+  flex-grow: 1;
+  margin: 0 auto;
+  max-width: 690px;
+}
+
+.searchFormContainer {
+  fill: #1A1A1B;
+  flex-grow: 1;
+  margin-left: 16px;
+  margin-right: 16px;
+  width: 100%;
+  height: auto;
+}
+
+.searchBorder {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.searchForm {
+  box-sizing: border-box;
+  display: flex;
+  background-color: #F6F7F8;
+  border: 1px solid #EDEFF1;
+  border-radius: 4px;
+  box-shadow: none;
+  height: 36px;
+}
+
+.searchIcon {
+  display: flex;
+}
+
+.searchIcon__container {
+  display: flex;
+  align-items: center;
+  padding: 0 9px 0 15px;
+}
+
+.icon {
+  font-size: 20px;
+  font-weight: 400;
+  height: 20px;
+  line-height: 20px;
+  vertical-align: middle;
+  width: 20px;
+
+  color: #878A8C;
+  position: relative;
+  top: 1px;
+}
+
+.icon-search::before {
+  content: "\f278";
+  -webkit-font-smoothing: antialiased;
+}
+
+.searchInput {
+  border: none;
+  background-color: #F6F7F8;
+  appearance: none;
+  color: #1c1c1c;
+  font-size: 14px;
+  line-height: 14px;
+  margin-right: 16px;
+  outline: none;
+  width: 100%;
+}
