@@ -26,14 +26,15 @@ const Nav = () => {
                </g>
              </svg>
           </Link>
-
           <div className="searchBar">
             <div className="searchFormContainer searchBorder">
               <form action="/search/" className="searchForm" method="get" role="search">
                 <label className="searchIcon" htmlFor="header-search-bar">
                   <div aria-hidden="true" className="searchIcon__container">
-                    <i className="icon icon-search" />
-                  </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
+                      <path d="m15.833 16.292-4.937-4.938q-.625.479-1.375.74-.75.26-1.479.26-1.834 0-3.104-1.271Q3.667 9.812 3.667 8q0-1.812 1.271-3.083 1.27-1.271 3.083-1.271 1.812 0 3.094 1.271Q12.396 6.188 12.396 8q0 .792-.281 1.542-.282.75-.74 1.312l4.958 4.958Zm-7.791-4.604q1.541 0 2.614-1.063T11.729 8q0-1.562-1.073-2.625T8.042 4.312q-1.563 0-2.636 1.063Q4.333 6.438 4.333 8t1.073 2.625q1.073 1.063 2.636 1.063Z"/>
+                    </svg>
+                    </div>
                 </label>
                 <input type="search" className="searchInput" name="q" placeholder='Search Reddit' />
               </form>
@@ -41,6 +42,35 @@ const Nav = () => {
           </div>
         </div>
       </div>
+
+      <div className="accountContainer">
+          <div className="accountOptions">
+            <div className="authButtons">
+              <Link to="/popup/login" aria-label="Log In" className="logInButton accountButton__font accountButton__box">
+                Log In
+              </Link>
+              <Link to="/popup/register" aria-label="Sign Up" className="registerButton accountButton__font accountButton__box">
+                Sign Up
+              </Link>
+            </div>
+            <div className="accountInfo">
+              <div className="header-user-dropdown">
+                <button aria-expanded="false" aria-haspopup="true" id="USER_DROPDOWN_ID" className="userDropdown__content userDropdown__border userDropdown__margin userDropdown__align">
+                  <span className="accountIconContainer">
+                    <span className="accountIconFace">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40">
+                        <path d="M20 18.958q-2.083 0-3.479-1.396-1.396-1.395-1.396-3.479 0-2.083 1.396-3.479T20 9.208q2.083 0 3.479 1.396t1.396 3.479q0 2.084-1.396 3.479-1.396 1.396-3.479 1.396ZM8.333 31.042V28.5q0-1.083.625-1.958t1.625-1.375q2.459-1.084 4.792-1.646 2.333-.563 4.625-.563t4.625.563q2.333.562 4.75 1.646 1.042.5 1.667 1.375t.625 1.958v2.542Zm1.417-1.417h20.5V28.5q0-.583-.396-1.146-.396-.562-1.104-.937-2.208-1.084-4.354-1.563-2.146-.479-4.396-.479t-4.417.479q-2.166.479-4.333 1.563-.708.375-1.104.937-.396.563-.396 1.146ZM20 17.542q1.458 0 2.458-1 1-1 1-2.459 0-1.458-1-2.458-1-1-2.458-1-1.458 0-2.458 1-1 1-1 2.458 0 1.459 1 2.459t2.458 1Zm0-3.459Zm0 15.542Z"/>
+                      </svg>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40">
+                      <path d="m20 24.5-8.833-8.833 1-1L20 22.5l7.833-7.833 1 1Z"/>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
     </header>
 
 
