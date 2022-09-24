@@ -1,8 +1,13 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import "../styles/popup/AccountDropdown.css";
+import '../../styles/nav/AccountDropdown.css';
+
+import AccountSubDropdown from './AccountSubDropdown';
 
 const AccountDropdown = () => {
+  const [showSub, setShowSub] = useState('termspolicy');
+ 
   const navigate = useNavigate();
 
   return (
@@ -26,10 +31,15 @@ const AccountDropdown = () => {
               </span>
               <span className="AccountDropdownButton__text">Terms & Policies</span>
 
-              {/* create state for subdropdowns, mapping? */}
               <i className="AccountDropdownButton__dropdown"/>
             </span>
           </button>
+
+          { showSub === 'termspolicy' ? (
+            <AccountSubDropdown />
+          ) : (
+            <div />
+          )}
 
           <button className="AccountDropdownButton" type="button" onClick={() => navigate("/popup/login")}>
             <span className="AccountDropdownButton_container">

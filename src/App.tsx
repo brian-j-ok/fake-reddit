@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import './styles/App.css';
 
-import Nav from './components/Nav';
+import Nav from './components/nav/Nav';
 import Popup from './components/popup/Popup';
 import Login from './components/popup/Login';
 import Register from './components/popup/Register';

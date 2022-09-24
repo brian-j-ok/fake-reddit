@@ -76,3 +76,28 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+/* SubDropdown */
+.SubDropdownContainer {
+  display: block;
+  border-bottom: 1px solid #EDEFF1;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
+
+.SubDropdown__link {
+  box-sizing: border-box;
+  height: 40px;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  align-items: center;
+  color: #1c1c1c;
+  display: flex;
+  padding-right: 16px;
+  padding-left: 52px;
+}
+
