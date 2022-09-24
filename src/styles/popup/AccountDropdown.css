@@ -1,0 +1,78 @@
+.AccountDropdownContainer {
+  /* TODO: need to write script to adjust these values to match positon of dropdown */
+  position: fixed;
+  left: 203.656px;
+  top: 39.5px;
+
+  border-radius: 4px;
+  border-top: 1px solid #EDEFF1;
+  justify-content: flex-end;
+  margin-top: 4px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  width: 252px;
+
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #EDEFF1;
+  box-shadow: none;
+  max-height: 80%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 80;
+
+  color: #1c1c1c;
+  background-color: #FFFFFF;
+}
+
+.AccountDropdownButton {
+  background-color: #FFFFFF;
+  color: #1c1c1c;
+  border: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  height: 40px;
+  width: 100%;
+}
+
+.AccountDropdownButton_container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.AccountDropdownButton__icon {
+  flex: 0 0;
+  font-size: 20px;
+  height: 20px;
+  margin-right: 12px;
+  width: 20px;
+}
+
+.icon {
+  font-size: 20px;
+  font-weight: 400;
+  height: 20px;
+  line-height: 20px;
+  vertical-align: middle;
+  width: 20px;
+}
+
+.icon::before {
+  content: "\f1c2";
+  -webkit-font-smoothing: antialiased;
+}
+
+.AccountDropdownButton__text {
+  flex: 1 1 100%;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

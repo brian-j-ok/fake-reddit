@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
+import './styles/App.css';
+
 import Nav from './components/Nav';
 import Popup from './components/popup/Popup';
 import Login from './components/popup/Login';
