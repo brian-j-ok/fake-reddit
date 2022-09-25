@@ -1,18 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import CSS from 'csstype';
 
 import '../../styles/nav/AccountDropdown.css';
 
 import AccountSubDropdown from './AccountSubDropdown';
 
-const AccountDropdown = () => {
+let dropdownPositionStyle: CSS.Properties = {
+  left: 0,
+  top: 0
+}
+
+interface AccountDropdownProps {
+  left: number;
+  top: number;
+}
+
+const AccountDropdown = ({left, top}: AccountDropdownProps) => {
   const [showSub, setShowSub] = useState('termspolicy');
  
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const dropdown = document.getElementById('DROPDOWN');
+    dropdown?.setAttribute("style", `left: ${left}px; top: ${top}px;`);
+  }, [top, left])
+
   return (
     <div>
-      <div className="AccountDropdownContainer">
+      <div id="DROPDOWN" className="AccountDropdownContainer" style={dropdownPositionStyle}>
         <div>
           <button className="AccountDropdownButton" type="button">
             <span className="AccountDropdownButton_container">

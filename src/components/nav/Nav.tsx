@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import '../../styles/nav/Nav.css';
@@ -7,6 +7,16 @@ import AccountDropdown from './AccountDropdown';
 
 const Nav = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+
+  const [dropdownPositionLeft, setDropdownPositionLeft] = useState(0);
+  const [dropdownPositionTop, setDropdownPositionTop] = useState(0);
+
+  useEffect(() => {
+    const dropdownContainer = document.getElementById('USER_DROPDOWN_ID') as HTMLButtonElement;
+    const dropdownBounding = dropdownContainer.getBoundingClientRect();
+    setDropdownPositionLeft(dropdownBounding.left);
+    setDropdownPositionTop(dropdownBounding.bottom);
+  })
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
@@ -83,7 +93,7 @@ const Nav = () => {
         </div>
 
         { showDropdown ? (
-          <AccountDropdown />
+          <AccountDropdown left={dropdownPositionLeft} top={dropdownPositionTop} />
         ) : (
           <div />
         )}
