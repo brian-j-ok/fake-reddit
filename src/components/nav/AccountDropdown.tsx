@@ -6,29 +6,24 @@ import '../../styles/nav/AccountDropdown.css';
 
 import AccountSubDropdown from './AccountSubDropdown';
 
-let dropdownPositionStyle: CSS.Properties = {
-  left: 0,
-  top: 0
-}
-
 interface AccountDropdownProps {
-  left: number;
+  right: number;
   top: number;
 }
 
-const AccountDropdown = ({left, top}: AccountDropdownProps) => {
+const AccountDropdown = ({right, top}: AccountDropdownProps) => {
   const [showSub, setShowSub] = useState('termspolicy');
  
   const navigate = useNavigate();
 
   useEffect(() => {
     const dropdown = document.getElementById('DROPDOWN');
-    dropdown?.setAttribute("style", `left: ${left}px; top: ${top}px;`);
-  }, [top, left])
+    dropdown?.setAttribute("style", `left: ${(right - 252)}px; top: ${top}px;`);
+  }, [right, top]);
 
   return (
     <div>
-      <div id="DROPDOWN" className="AccountDropdownContainer" style={dropdownPositionStyle}>
+      <div id="DROPDOWN" className="AccountDropdownContainer">
         <div>
           <button className="AccountDropdownButton" type="button">
             <span className="AccountDropdownButton_container">

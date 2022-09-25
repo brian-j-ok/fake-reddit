@@ -8,15 +8,17 @@ import AccountDropdown from './AccountDropdown';
 const Nav = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
-  const [dropdownPositionLeft, setDropdownPositionLeft] = useState(0);
+  const [dropdownPositionRight, setDropdownPositionRight] = useState(0);
   const [dropdownPositionTop, setDropdownPositionTop] = useState(0);
 
   useEffect(() => {
+    window.addEventListener('resize', () => setShowDropdown(false));
+
     const dropdownContainer = document.getElementById('USER_DROPDOWN_ID') as HTMLButtonElement;
     const dropdownBounding = dropdownContainer.getBoundingClientRect();
-    setDropdownPositionLeft(dropdownBounding.left);
+    setDropdownPositionRight(dropdownBounding.right);
     setDropdownPositionTop(dropdownBounding.bottom);
-  })
+  }, [showDropdown])
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
@@ -93,7 +95,7 @@ const Nav = () => {
         </div>
 
         { showDropdown ? (
-          <AccountDropdown left={dropdownPositionLeft} top={dropdownPositionTop} />
+          <AccountDropdown right={dropdownPositionRight} top={dropdownPositionTop} />
         ) : (
           <div />
         )}
