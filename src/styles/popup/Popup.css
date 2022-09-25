@@ -27,3 +27,17 @@
   width: 850px;
   z-index: 111;
 }
+
+.closePopupButton {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  border: none;
+  background-color: transparent;
+}
+
+.closePopupButton__image {
+  height: 20px;
+  fill: grey;
+  width: 20px;
+}
